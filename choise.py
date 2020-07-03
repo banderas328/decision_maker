@@ -23,8 +23,7 @@ while i < number_of_values :
         anouther_one_parameter = input("anouther one parameter ? y/n")
     i += 1
 
-i = 0
-
+print(parameters_final)
 result = []
 
 for parameter in parameters_final:
@@ -32,19 +31,14 @@ for parameter in parameters_final:
     weight = parameter.get("weight")
     parameter_cost = parameter.get("parameter_cost")
     i = parameter.get("i")
-    print(weight)
-    print(parameter_cost)
-    print(parameter)
     total_weight = float(weight)*float(parameter_cost)
     result_value = {"i": i, "total_weight" : total_weight}
     result.append(result_value)
 
-
+print(result)
 output = {}
 
 for value in result:
-    # print(value.get("i"))
-    # print()
     i = value.get("i")
     parameter_total_weight  = value.get("total_weight")
     print(parameter_total_weight)
@@ -52,13 +46,9 @@ for value in result:
         weight_old = output[i]
     else :
         weight_old = 0
-    print(weight_old)
     weight_sum = weight_old + parameter_total_weight
     print(weight_sum)
     dict = {i: weight_sum}
-
-
-
     output.update(dict)
 
 print(output)
