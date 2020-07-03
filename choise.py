@@ -47,7 +47,6 @@ for value in result:
     else :
         weight_old = 0
     weight_sum = weight_old + parameter_total_weight
-    print(weight_sum)
     dict = {i: weight_sum}
     output.update(dict)
 
